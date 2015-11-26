@@ -20,7 +20,18 @@
     <body>
         <canvas id="canvas"></canvas>
         <!-- <img id="canvasImg" alt="Right click to save me!"> -->
-        <script src="colors.js"></script>
-        <script src="main.js"></script>
+        <!-- script src="colors.js"></script -->
+        <script src="new.colors.js"></script>
+        <!--script src="main.js"></script-->
+        <script>
+            console.log(Colors.extract("rgb(255, 255, 255)"));
+            console.log(Colors.extract("rgb(0,150,255)"));
+            console.log(Colors.extract("rgba(255, 0, 255, 0.5)"));
+            console.log(Colors.extract("rgba(255,0,0,0.75)"));
+            console.log(Colors.extract("#00CC00"));
+            console.log(Colors.extract("#123"));
+            console.log(Colors.extract("#00CC00AA"));
+            console.log(Colors.extract("#0C0A"));
+        </script>
     </body>
 </html>

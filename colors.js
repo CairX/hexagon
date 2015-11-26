@@ -177,7 +177,7 @@ var Colors = (function() {
 		});
 
 		return self.rgb.string(values);
-	}
+	};
 
 	return self;
 })();

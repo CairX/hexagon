@@ -1,3 +1,5 @@
+"use strict";
+
 var canvas = document.getElementById("canvas");
 canvas.width = 800;
 canvas.height = 600;
@@ -9,7 +11,8 @@ function Hexagon(x, y, size, color) {
     this.y = y;
     this.size = size;
 
-    this.colors = Colors.rgb.loop(color, Colors.rgb.darken(color, 50), 50);
+    // this.colors = Colors.rgb.loop(color, Colors.rgb.darken(color, 50), 50);
+    this.colors = Colors.transition(color, "#00F0", 50);
     console.log(this.colors);
     this.last;
     this.elapsed = 0;
@@ -53,12 +56,12 @@ var y = 200;
 
 var h = [];
 h.push(new Hexagon(x + (size * 0), y + (size * 0), size, "rgb(255, 0, 0)")); // Center
-h.push(new Hexagon(x - (size * 1), y + (size * 0), size, "rgb(0, 255, 0)")); // Left
-h.push(new Hexagon(x - (size * 0.5), y - (size * 0.75), size, "rgb(0, 0, 255)"));
-h.push(new Hexagon(x + (size * 0.5), y - (size * 0.75), size, "rgb(0, 255, 0)"));
-h.push(new Hexagon(x + (size * 1), y + (size * 0), size, "rgb(0, 0, 255)")); // Right
-h.push(new Hexagon(x - (size * 0.5), y + (size * 0.75), size, "rgb(0, 0, 255)"));
-h.push(new Hexagon(x + (size * 0.5), y + (size * 0.75), size, "rgb(0, 255, 0)"));
+// h.push(new Hexagon(x - (size * 1), y + (size * 0), size, "rgb(0, 255, 0)")); // Left
+// h.push(new Hexagon(x - (size * 0.5), y - (size * 0.75), size, "rgb(0, 0, 255)"));
+// h.push(new Hexagon(x + (size * 0.5), y - (size * 0.75), size, "rgb(0, 255, 0)"));
+// h.push(new Hexagon(x + (size * 1), y + (size * 0), size, "rgb(0, 0, 255)")); // Right
+// h.push(new Hexagon(x - (size * 0.5), y + (size * 0.75), size, "rgb(0, 0, 255)"));
+// h.push(new Hexagon(x + (size * 0.5), y + (size * 0.75), size, "rgb(0, 255, 0)"));
 
 // h.push(new Hexagon(x + size, 0, size, "#009"));
 // h.push(new Hexagon(x + size / 2, size / 4 * 3, size, "#00D")); // Center

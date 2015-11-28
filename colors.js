@@ -85,7 +85,6 @@ var Colors = (function() {
 	 * @return {Array} List of color strings.
 	 * ------------------------------------------------- */
 	self.rgb.transition = function(start, end, steps) {
-		// TODO: Take color list to create multiple transitions instead of start and end.
 		start = self.rgb.extract(start);
 		end = self.rgb.extract(end);
 
